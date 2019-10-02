@@ -4,7 +4,7 @@ expect.extend({ toMatchImageSnapshot });
 
 describe('Logging into Admin', () => {
   beforeAll(async () => {
-    await page.goto('http://localhost')
+    await page.goto('https://www.preview.marketplace.team')
   });
 
   describe('Digital Market Home page', () => {

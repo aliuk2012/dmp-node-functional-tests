@@ -1,6 +1,6 @@
-const { toMatchImageSnapshot } = require('jest-image-snapshot');
+// const { toMatchImageSnapshot } = require('jest-image-snapshot');
 
-expect.extend({ toMatchImageSnapshot });
+// expect.extend({ toMatchImageSnapshot });
 
 describe('Logging into Admin', () => {
   beforeAll(async () => {
@@ -14,18 +14,18 @@ describe('Logging into Admin', () => {
 
     test('user can login',  async () => {
       //Screenshot our home page
-      const homePage = await page.screenshot({fullPage: true})
+      // const homePage = await page.screenshot({fullPage: true})
       // Do a visual regression test
-      expect(homePage).toMatchImageSnapshot()
+      // expect(homePage).toMatchImageSnapshot()
 
       //Find login link and navigate to page
       await page.click('a[href="/user/login"]',{waitUntil: 'domcontentloaded'})
 
       await expect(page.title()).resolves.toMatch('Digital Marketplace')
       // Screenshot our login page
-      const loginPage = await page.screenshot({fullPage: true})
+      // const loginPage = await page.screenshot({fullPage: true})
       // Do a visual regression test
-      expect(loginPage).toMatchImageSnapshot()
+      // expect(loginPage).toMatchImageSnapshot()
     })
   })
 })
